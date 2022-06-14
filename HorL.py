@@ -47,10 +47,25 @@ while True:
         if answer == 'h':
             if nextvalue > currentvalue:
                 print('Correct! It was higher')
-                score += 20
+                points += 20
             else:
-                print('Wrong! Unfortunately that was not right')
-                score -= 15
+                print('Wrong! Unfortunately, that was not right')
+                points -= 15
 
-        elif answer
+        elif answer == 'l':
+            if nextvalue < currentvalue:
+                print('Correct! It was higher')
+                points += 20
+            else:
+                print('Wrong! Unfortunately, that was not right!')
+                points -= 15
+        
+        print(f'Your score is {points}')
+        currentrank = nextrank
+        currentvalue = nextvalue
 
+        replay = input('Do you want to play again? Press ENTER to play again and Q to quit')
+        if replay == 'q':
+            break
+
+    print('Goodbye!!! See you again next time.')
