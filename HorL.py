@@ -64,8 +64,8 @@ while True:
         currentrank = nextrank
         currentvalue = nextvalue
 
-        replay = input('Do you want to play again? Press ENTER to play again and Q to quit')
-        if replay == 'q':
-            break
+    replay = input('Do you want to play again? Press ENTER to play again and Q to quit')
+    if replay == 'q':
+        break
 
     print('Goodbye!!! See you again next time.')
