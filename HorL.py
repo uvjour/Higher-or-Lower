@@ -37,13 +37,16 @@ while True:
     print('')
 
     for cardnumber in range(numoftries):
-        answer = input(f'Will the next card be higher or lower than {currentrank} of {currentsuit}? Enter h for higher or l for lower!')
+        answer = input(f'Will the next card be higher or lower than {currentrank} of {currentsuit}? Enter h for higher or l for lower!: ')
+        print('')
         answer = answer.lower()
         nextCard = getCard(gameDeckList)
         nextrank = nextCard['rank']
         nextsuit = nextCard['suit']
         nextvalue = nextCard['value']
+        print('')
         print(f'And the next card is {nextrank} of {nextsuit}')
+        print('')
         if answer == 'h':
             if nextvalue > currentvalue:
                 print('Correct! It was higher')
@@ -63,7 +66,7 @@ while True:
         print(f'Your score is {points}')
         currentrank = nextrank
         currentvalue = nextvalue
-
+    print('')
     replay = input('Do you want to play again? Press ENTER to play again and Q to quit')
     if replay == 'q':
         break
